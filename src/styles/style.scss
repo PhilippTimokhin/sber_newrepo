@@ -1,0 +1,683 @@
+// ===variables=== //
+
+$fz-but: 18px;
+$fz-g: 24px;
+$fv: small-caps;
+$ff: 'IBM Plex Serif',
+serif;
+
+// ===variables=== //
+
+//  ===header=== //
+
+.header--wrapper {
+
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 30vh;
+    // border: 1px solid green;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5px;
+
+    .header__value {
+        margin-top: 20px;
+
+        .value__notes {
+            letter-spacing: 1px;
+            font-family: $ff;
+        }
+    }
+
+    .media__search {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        height: 5vh;
+        font-family: $ff;
+        width: 500px;
+        text-align: center;
+    }
+
+    .button__add {
+        font-family: $ff;
+        width: 500px;
+        background-color: #4CAF50;
+        color: white;
+
+        border: 2px solid #4CAF50;
+        border-radius: 2px;
+        font-size: 16px;
+        transition: all .3s ease;
+
+        &:hover {
+            background-color: #ffffff;
+            color: black;
+            cursor: pointer;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .header--wrapper {
+        width: 100%;
+        top: 0;
+        left: 0;
+        height: 15vh;
+        // border: 1px solid green;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .media__search {
+            margin-top: 10px;
+            margin-bottom: 10px;
+            height: 3vh;
+            font-family: $ff;
+            width: 300px;
+            text-align: center;
+        }
+
+        .button__add {
+            font-family: $ff;
+            width: 300px;
+            background-color: #4CAF50;
+            color: white;
+
+            border: 2px solid #4CAF50;
+            border-radius: 2px;
+            font-size: 16px;
+            transition: all .3s ease;
+
+            &:hover {
+                background-color: #ffffff;
+                color: black;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+//  ===header=== //
+
+//  ===footer=== //
+
+.footer--wrapper {
+    margin-top: 200px;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 30vh;
+    // border: 1px solid green;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .media__logo {
+        font-variant: $fv;
+        font-size: $fz-g;
+        font-family: $ff;
+    }
+
+    .copy__info {
+        font-variant: $fv;
+        font-size: $fz-g;
+        font-family: $ff;
+    }
+}
+
+//  ===footer=== //
+
+//  ===todoform=== //
+
+.form--wrapper.active {
+    transform: scale(1);
+}
+
+.form--wrapper {
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #fff;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transform: scale(0);
+    transition: all .3s ease;
+
+    .form__name {
+        text-align: center;
+        font-family: $ff;
+        width: 50%;
+        margin-bottom: 15px;
+    }
+
+    .form__labelName {
+        font-family: $ff;
+        margin-bottom: 5px;
+    }
+
+    .form__bodyName {
+        font-family: $ff;
+        margin-bottom: 5px;
+    }
+
+    .form__task {
+        text-align: center;
+        font-family: $ff;
+        width: 50%;
+        margin-bottom: 15px;
+    }
+
+    .form__buttons {
+        display: flex;
+        justify-content: space-between;
+        width: 50%;
+
+        .button__add {
+            font-family: $ff;
+            width: 49%;
+            background-color: white;
+            color: black;
+            border: 2px solid #4CAF50;
+            border-radius: 2px;
+            font-size: 16px;
+            transition: all .3s ease;
+
+            &:hover {
+                background-color: #4CAF50;
+                color: white;
+                cursor: pointer;
+            }
+
+        }
+
+        .button__cancel {
+            font-family: $ff;
+            width: 49%;
+            background-color: white;
+            color: black;
+            border: 2px solid #c42e2e;
+            border-radius: 2px;
+            font-size: 16px;
+            transition: all .3s ease;
+
+            &:hover {
+                background-color: #c42e2e;
+                color: white;
+                cursor: pointer;
+            }
+
+        }
+    }
+
+}
+
+@media (max-width: 768px) {
+    .form--wrapper.active {
+        transform: scale(1);
+    }
+
+    .form--wrapper {
+        z-index: 1;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: #fff;
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transform: scale(0);
+        transition: all .3s ease;
+
+        .form__name {
+            text-align: center;
+            font-family: $ff;
+            width: 50%;
+            margin-bottom: 15px;
+        }
+
+        .form__labelName {
+            font-family: $ff;
+            margin-bottom: 5px;
+        }
+
+        .form__bodyName {
+            font-family: $ff;
+            margin-bottom: 5px;
+        }
+
+        .form__task {
+            text-align: center;
+            font-family: $ff;
+            width: 50%;
+            margin-bottom: 15px;
+        }
+
+        .form__buttons {
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-between;
+            width: 50%;
+
+            .button__add {
+                font-family: $ff;
+                width: 49%;
+                background-color: white;
+                color: black;
+                border: 2px solid #4CAF50;
+                border-radius: 2px;
+                font-size: 16px;
+                transition: all .3s ease;
+
+                &:hover {
+                    background-color: #4CAF50;
+                    color: white;
+                    cursor: pointer;
+                }
+
+            }
+
+            .button__cancel {
+                font-family: $ff;
+                width: 49%;
+                background-color: white;
+                color: black;
+                border: 2px solid #c42e2e;
+                border-radius: 2px;
+                font-size: 16px;
+                transition: all .3s ease;
+
+                &:hover {
+                    background-color: #c42e2e;
+                    color: white;
+                    cursor: pointer;
+                }
+
+            }
+        }
+
+    }
+}
+
+//  ===todoform=== //
+
+//  ===todolist=== //
+.form--edit {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #fff;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .formEdit_task {
+        height: 15vh;
+        width: 45%;
+        font-family: $ff;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .formEdit__buttons {
+        width: 50%;
+        display: flex;
+        justify-content: space-around;
+
+        .formEdit_s {
+            font-family: $ff;
+            width: 40%;
+            font-family: $ff;
+            background-color: white;
+            color: black;
+            border: 2px solid #4CAF50;
+            border-radius: 2px;
+            font-size: 16px;
+            transition: all .3s ease;
+
+            &:hover {
+                background-color: #4CAF50;
+                color: white;
+                cursor: pointer;
+            }
+        }
+
+        .formEdit_c {
+            font-family: $ff;
+            width: 40%;
+            background-color: white;
+            color: black;
+            border: 2px solid #c42e2e;
+            border-radius: 2px;
+            font-size: 16px;
+            transition: all .3s ease;
+
+            &:hover {
+                background-color: #c42e2e;
+                color: white;
+                cursor: pointer;
+            }
+        }
+    }
+
+
+}
+
+.showModal {
+
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #fff;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .showModal__text {
+        font-family: $ff;
+        font-size: 24px;
+    }
+
+    .showModal__buttons {
+        margin-top: 20px;
+        width: 50%;
+        display: flex;
+        justify-content: space-around;
+
+        .showModal__y {
+            font-family: $ff;
+            width: 40%;
+            font-family: $ff;
+            background-color: white;
+            color: black;
+            border: 2px solid #4CAF50;
+            border-radius: 2px;
+            font-size: 16px;
+            transition: all .3s ease;
+
+            &:hover {
+                background-color: #4CAF50;
+                color: white;
+                cursor: pointer;
+            }
+        }
+
+        .showModal__n {
+            font-family: $ff;
+            width: 40%;
+            background-color: white;
+            color: black;
+            border: 2px solid #c42e2e;
+            border-radius: 2px;
+            font-size: 16px;
+            transition: all .3s ease;
+
+            &:hover {
+                background-color: #c42e2e;
+                color: white;
+                cursor: pointer;
+            }
+        }
+    }
+
+}
+
+.list--wrapper {
+
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    width: 95%;
+
+
+
+
+    .list__todo {
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        border-radius: 4px;
+        padding: 10px;
+        // border: 1px solid #000;
+        min-height: 100%;
+        transition: all .5s ease;
+
+        &:hover {
+            cursor: pointer;
+            transform: scale(1.02);
+            box-shadow: 4px 4px 14px 6px rgba(0, 0, 0, 0.15);
+        }
+
+        .todoEdit__header {
+            margin-left: 50px;
+            margin-bottom: 10px;
+
+            .todoEdit__name {
+                height: 3vh;
+                width: 250px;
+            }
+
+            .todoEdit__ok {
+                margin-left: 30px;
+                margin-right: 10px;
+            }
+        }
+
+        .todo__header {
+            margin-bottom: 10px;
+            margin-left: 50px;
+
+            .todo__title {
+                font-family: $ff;
+
+            }
+
+            .todoEdit__edit {
+                margin-left: 30px;
+            }
+        }
+
+        .todo__body {
+            margin-bottom: 10px;
+
+            .todo__task {
+                font-family: $ff;
+                margin-left: 10px;
+
+            }
+        }
+
+        .todo__buttons {
+            margin-bottom: 10px;
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+
+            .button__delete {
+                font-family: $ff;
+                width: 45%;
+                font-family: $ff;
+                background-color: white;
+                color: black;
+                border: 2px solid #4CAF50;
+                border-radius: 2px;
+                font-size: 16px;
+                transition: all .3s ease;
+
+                &:hover {
+                    background-color: #4CAF50;
+                    color: white;
+                    cursor: pointer;
+                }
+            }
+
+            .button__edit {
+                font-family: $ff;
+                width: 45%;
+                background-color: white;
+                color: black;
+                border: 2px solid #c42e2e;
+                border-radius: 2px;
+                font-size: 16px;
+                transition: all .3s ease;
+
+                &:hover {
+                    background-color: #c42e2e;
+                    color: white;
+                    cursor: pointer;
+                }
+
+            }
+        }
+
+    }
+}
+
+
+
+@media (max-width: 768px) {
+    .list--wrapper {
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+        flex-wrap: wrap;
+        width: 100%;
+
+
+
+
+        .list__todo {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 80%;
+            border-radius: 4px;
+            padding: 10px;
+            // border: 1px solid #000;
+            min-height: 100%;
+            transition: all .5s ease;
+
+
+            &:hover {
+                cursor: pointer;
+                transform: scale(1.02);
+                box-shadow: 4px 4px 14px 6px rgba(0, 0, 0, 0.15);
+            }
+
+
+
+            .todoEdit__header {
+                margin-left: 50px;
+                margin-bottom: 10px;
+
+                .todoEdit__name {
+                    height: 3vh;
+                    width: 150px;
+                }
+
+                .todoEdit__ok {
+                    margin-left: 30px;
+                    margin-right: 10px;
+                }
+            }
+
+            .todo__header {
+                margin-bottom: 10px;
+
+                .todo__title {
+                    font-family: $ff;
+
+                }
+            }
+
+            .todo__body {
+                margin-bottom: 10px;
+
+                .todo__task {
+                    font-family: $ff;
+                    margin-left: 10px;
+
+                }
+            }
+
+            .todo__buttons {
+                margin-bottom: 10px;
+                width: 100%;
+                display: flex;
+                justify-content: space-around;
+
+                .button__delete {
+                    font-family: $ff;
+                    width: 45%;
+                    font-family: $ff;
+                    background-color: white;
+                    color: black;
+                    border: 2px solid #4CAF50;
+                    border-radius: 2px;
+                    font-size: 16px;
+                    transition: all .3s ease;
+
+                    &:hover {
+                        background-color: #4CAF50;
+                        color: white;
+                        cursor: pointer;
+                    }
+                }
+
+                .button__edit {
+                    font-family: $ff;
+                    width: 45%;
+                    background-color: white;
+                    color: black;
+                    border: 2px solid #c42e2e;
+                    border-radius: 2px;
+                    font-size: 16px;
+                    transition: all .3s ease;
+
+                    &:hover {
+                        background-color: #c42e2e;
+                        color: white;
+                        cursor: pointer;
+                    }
+
+                }
+            }
+
+        }
+    }
+}
+
+
+//  ===todolist=== //
